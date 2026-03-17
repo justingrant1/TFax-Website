@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   title: "Receive Faxes from Any Country on iPhone — TigerFax Pro",
   description:
     "Get a dedicated fax number to receive faxes from any country directly on your iPhone. No fax machine needed. TigerFax Pro — $4.99/month.",
-  alternates: { canonical: "https://www.tigerfax.app/receive-fax" },
+  alternates: { canonical: "https://www.tigerfax.com/receive-fax" },
   openGraph: {
     title: "Receive International Faxes on iPhone | TigerFax",
     description: "Receive faxes from any country on your iPhone with TigerFax Pro. Dedicated number, instant notifications.",
-    url: "https://www.tigerfax.app/receive-fax",
+    url: "https://www.tigerfax.com/receive-fax",
   },
 }
 

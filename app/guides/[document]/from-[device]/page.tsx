@@ -11,7 +11,7 @@ import { CTABanner } from "@/components/pseo/CTABanner"
 import { RelatedPages } from "@/components/pseo/RelatedPages"
 import { CheckCircle, AlertTriangle, Shield, Lightbulb, Scan } from "lucide-react"
 
-const BASE_URL = "https://www.tigerfax.app"
+const BASE_URL = "https://www.tigerfax.com"
 
 interface Props {
   params: Promise<{ document: string; device: string }>

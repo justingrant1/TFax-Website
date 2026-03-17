@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/"],
       },
     ],
-    sitemap: "https://www.tigerfax.app/sitemap.xml",
-    host: "https://www.tigerfax.app",
+    sitemap: "https://www.tigerfax.com/sitemap.xml",
+    host: "https://www.tigerfax.com",
   }
 }

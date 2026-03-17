@@ -5,7 +5,7 @@ import { getAllComparePageSlugs } from "@/data/competitors"
 import { countries } from "@/data/countries"
 import { coverSheets } from "@/data/cover-sheets"
 
-const BASE_URL = "https://www.tigerfax.app"
+const BASE_URL = "https://www.tigerfax.com"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString()

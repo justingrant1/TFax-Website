@@ -58,7 +58,7 @@ export function buildBreadcrumbSchema(crumbs: Breadcrumb[]) {
       "@type": "ListItem",
       position: i + 1,
       name: crumb.name,
-      item: `https://www.tigerfax.app${crumb.href}`,
+      item: `https://www.tigerfax.com${crumb.href}`,
     })),
   }
 }
@@ -82,18 +82,18 @@ export function buildArticleSchema({
     "@type": "Article",
     headline: title,
     description,
-    url: `https://www.tigerfax.app${url}`,
+    url: `https://www.tigerfax.com${url}`,
     datePublished: publishDate,
     dateModified: modifiedDate,
     author: {
       "@type": "Organization",
       name: "TigerFax",
-      url: "https://www.tigerfax.app",
+      url: "https://www.tigerfax.com",
     },
     publisher: {
       "@type": "Organization",
       name: "TigerFax",
-      url: "https://www.tigerfax.app",
+      url: "https://www.tigerfax.com",
     },
   }
 }
@@ -110,7 +110,7 @@ export function buildSoftwareAppSchema() {
       { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free — 3 pages included" },
       { "@type": "Offer", price: "4.99", priceCurrency: "USD", description: "Pro — unlimited + dedicated fax number" },
     ],
-    url: "https://www.tigerfax.app",
+    url: "https://www.tigerfax.com",
     downloadUrl: "https://apps.apple.com/us/app/tigerfax/id6758597882",
   }
 }

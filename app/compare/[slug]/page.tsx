@@ -51,9 +51,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title,
     description,
     keywords: [competitor.primary_keyword, ...competitor.secondary_keywords].join(", "),
-    openGraph: { title, description, type: "article", url: `https://www.tigerfax.app/compare/${slug}` },
+    openGraph: { title, description, type: "article", url: `https://www.tigerfax.com/compare/${slug}` },
     twitter: { card: "summary_large_image", title, description },
-    alternates: { canonical: `https://www.tigerfax.app/compare/${slug}` },
+    alternates: { canonical: `https://www.tigerfax.com/compare/${slug}` },
   }
 }
 

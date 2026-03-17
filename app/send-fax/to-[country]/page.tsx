@@ -10,7 +10,7 @@ import { RelatedPages } from "@/components/pseo/RelatedPages"
 import { DialingFormatSection } from "@/components/pseo/DialingFormatSection"
 import { CheckCircle } from "lucide-react"
 
-const BASE_URL = "https://www.tigerfax.app"
+const BASE_URL = "https://www.tigerfax.com"
 
 interface Props {
   params: { country: string }

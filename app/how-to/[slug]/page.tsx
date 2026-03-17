@@ -34,10 +34,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title,
       description,
       type: "article",
-      url: `https://www.tigerfax.app/how-to/${slug}`,
+      url: `https://www.tigerfax.com/how-to/${slug}`,
     },
     twitter: { card: "summary_large_image", title, description },
-    alternates: { canonical: `https://www.tigerfax.app/how-to/${slug}` },
+    alternates: { canonical: `https://www.tigerfax.com/how-to/${slug}` },
   }
 }
 

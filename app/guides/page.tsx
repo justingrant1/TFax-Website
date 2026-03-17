@@ -9,11 +9,11 @@ export const metadata: Metadata = {
   title: "Fax Document Guides — How to Fax Any Document from iPhone | TigerFax",
   description:
     "Step-by-step guides for faxing every type of document from your iPhone. W-9s, medical records, contracts, tax forms, and more — free with TigerFax.",
-  alternates: { canonical: "https://www.tigerfax.app/guides" },
+  alternates: { canonical: "https://www.tigerfax.com/guides" },
   openGraph: {
     title: "Fax Document Guides | TigerFax",
     description: "How to fax any document from your iPhone — step-by-step guides for every document type.",
-    url: "https://www.tigerfax.app/guides",
+    url: "https://www.tigerfax.com/guides",
   },
 }
 

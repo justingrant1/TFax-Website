@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   description:
     "Get help with TigerFax. Find answers to common questions about sending faxes, pricing, file formats, delivery confirmations, and managing your subscription.",
   alternates: {
-    canonical: "https://www.tigerfax.app/support",
+    canonical: "https://www.tigerfax.com/support",
   },
   openGraph: {
     title: "Support & FAQ | TigerFax",
     description:
       "Get help with TigerFax. Find answers to common questions about sending faxes, pricing, and managing your subscription.",
-    url: "https://www.tigerfax.app/support",
+    url: "https://www.tigerfax.com/support",
   },
 }
 
@@ -27,13 +27,13 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://www.tigerfax.app",
+      item: "https://www.tigerfax.com",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Support",
-      item: "https://www.tigerfax.app/support",
+      item: "https://www.tigerfax.com/support",
     },
   ],
 }

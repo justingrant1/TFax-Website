@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Free Fax Cover Sheet Templates — TigerFax",
     description: "Free fax cover sheet templates for every industry and use case.",
-    url: "https://www.tigerfax.app/templates",
+    url: "https://www.tigerfax.com/templates",
   },
-  alternates: { canonical: "https://www.tigerfax.app/templates" },
+  alternates: { canonical: "https://www.tigerfax.com/templates" },
 }
 
 const industrySheets = getCoverSheetsByType("industry")

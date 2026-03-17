@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   title: "Send a Fax Internationally from iPhone — Country Guides | TigerFax",
   description:
     "Step-by-step guides for sending a fax to any country from your iPhone. Dialing formats, country codes, and tips for 32+ countries. Free to start with TigerFax.",
-  alternates: { canonical: "https://www.tigerfax.app/send-fax" },
+  alternates: { canonical: "https://www.tigerfax.com/send-fax" },
   openGraph: {
     title: "Send International Fax from iPhone | TigerFax",
     description: "Country-by-country guides for sending faxes from your iPhone. Dialing formats and tips for 32+ countries.",
-    url: "https://www.tigerfax.app/send-fax",
+    url: "https://www.tigerfax.com/send-fax",
   },
 }
 

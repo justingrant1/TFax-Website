@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   title: "Get a Fax Number for Any Country — TigerFax Pro",
   description:
     "Get a dedicated US fax number to send and receive faxes with contacts in any country. TigerFax Pro — $4.99/month. No hardware, no fax machine.",
-  alternates: { canonical: "https://www.tigerfax.app/fax-number" },
+  alternates: { canonical: "https://www.tigerfax.com/fax-number" },
   openGraph: {
     title: "Get a Fax Number for Any Country | TigerFax",
     description: "Dedicated US fax number for international faxing. Works with contacts in 32+ countries. TigerFax Pro.",
-    url: "https://www.tigerfax.app/fax-number",
+    url: "https://www.tigerfax.com/fax-number",
   },
 }
 

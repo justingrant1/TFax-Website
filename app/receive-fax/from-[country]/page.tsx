@@ -9,7 +9,7 @@ import { StepByStep } from "@/components/pseo/StepByStep"
 import { RelatedPages } from "@/components/pseo/RelatedPages"
 import { CheckCircle, Inbox } from "lucide-react"
 
-const BASE_URL = "https://www.tigerfax.app"
+const BASE_URL = "https://www.tigerfax.com"
 
 interface Props {
   params: { country: string }

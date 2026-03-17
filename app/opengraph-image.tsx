@@ -152,7 +152,7 @@ export default function OgImage() {
             TigerFax
           </span>
           <span style={{ color: "#475569", fontSize: 20, marginLeft: 4 }}>
-            tigerfax.app
+            tigerfax.com
           </span>
         </div>
       </div>

@@ -8,7 +8,7 @@ import { FAQSection } from "@/components/pseo/FAQSection"
 import { RelatedPages } from "@/components/pseo/RelatedPages"
 import { CheckCircle, Shield, Download, FileText } from "lucide-react"
 
-const BASE_URL = "https://www.tigerfax.app"
+const BASE_URL = "https://www.tigerfax.com"
 
 interface Props {
   params: Promise<{ slug: string }>

@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Read the TigerFax Terms of Service. Understand your rights and responsibilities when using our iPhone fax app, including acceptable use, fees, and liability.",
   alternates: {
-    canonical: "https://www.tigerfax.app/terms",
+    canonical: "https://www.tigerfax.com/terms",
   },
   openGraph: {
     title: "Terms of Service | TigerFax",
     description:
       "Read the TigerFax Terms of Service. Understand your rights and responsibilities when using our iPhone fax app.",
-    url: "https://www.tigerfax.app/terms",
+    url: "https://www.tigerfax.com/terms",
   },
 }
 
@@ -26,13 +26,13 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://www.tigerfax.app",
+      item: "https://www.tigerfax.com",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Terms of Service",
-      item: "https://www.tigerfax.app/terms",
+      item: "https://www.tigerfax.com/terms",
     },
   ],
 }

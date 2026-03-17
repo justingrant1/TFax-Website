@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Learn how TigerFax collects, uses, and protects your personal data. We are committed to your privacy and the security of your fax documents.",
   alternates: {
-    canonical: "https://www.tigerfax.app/privacy",
+    canonical: "https://www.tigerfax.com/privacy",
   },
   openGraph: {
     title: "Privacy Policy | TigerFax",
     description:
       "Learn how TigerFax collects, uses, and protects your personal data.",
-    url: "https://www.tigerfax.app/privacy",
+    url: "https://www.tigerfax.com/privacy",
   },
 }
 
@@ -26,13 +26,13 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://www.tigerfax.app",
+      item: "https://www.tigerfax.com",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Privacy Policy",
-      item: "https://www.tigerfax.app/privacy",
+      item: "https://www.tigerfax.com/privacy",
     },
   ],
 }

@@ -9,11 +9,11 @@ export const metadata: Metadata = {
   title: "TigerFax vs Other Fax Apps — Comparisons & Reviews | TigerFax",
   description:
     "Compare TigerFax to eFax, Fax.Plus, iFax, FaxBurner, and more. Side-by-side feature comparisons, pricing breakdowns, and honest reviews to help you choose the best fax app for iPhone.",
-  alternates: { canonical: "https://www.tigerfax.app/compare" },
+  alternates: { canonical: "https://www.tigerfax.com/compare" },
   openGraph: {
     title: "TigerFax vs Other Fax Apps | TigerFax",
     description: "Compare TigerFax to every major fax app. Feature tables, pricing, and honest reviews.",
-    url: "https://www.tigerfax.app/compare",
+    url: "https://www.tigerfax.com/compare",
   },
 }
 
