@@ -43,6 +43,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   // ─── Phase 1b: Document × Device matrix pages (20 docs × 20 devices = 400) ─
+  // URL pattern: /guides/fax-{doc}/from-{device}
+  // The folder "from-[device]" means Next.js param "device" = slug only (no "from-" prefix)
+  // but the actual URL segment IS "from-{slug}" — so we include it in the sitemap URL
   const docDevicePages: MetadataRoute.Sitemap = documentTypes.flatMap((doc) =>
     devices.map((device) => ({
       url: `${BASE_URL}/guides/fax-${doc.slug}/from-${device.slug}`,

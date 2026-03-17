@@ -18,13 +18,16 @@ interface Props {
 }
 
 // ─── Static params: 20 docs × 20 devices = 400 pages ─────────────────────────
+// NOTE: The folder is named "from-[device]" so Next.js treats "from-" as a
+// literal URL prefix. The param "device" receives just the slug (e.g. "iphone-16"),
+// and the full URL segment becomes "from-iphone-16" automatically.
 export async function generateStaticParams() {
   const pairs: { document: string; device: string }[] = []
   for (const doc of documentTypes) {
     for (const device of devices) {
       pairs.push({
         document: `fax-${doc.slug}`,
-        device: `from-${device.slug}`,
+        device: device.slug,          // ← just the slug, NOT "from-{slug}"
       })
     }
   }
@@ -33,9 +36,9 @@ export async function generateStaticParams() {
 
 // ─── Metadata ─────────────────────────────────────────────────────────────────
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { document: docParam, device: deviceParam } = await params
+  const { document: docParam, device: deviceSlug } = await params
   const docSlug = docParam.replace("fax-", "")
-  const deviceSlug = deviceParam.replace("from-", "")
+  // deviceSlug is already the raw slug (e.g. "iphone-16") — folder prefix "from-" is not part of the param
   const doc = getDocumentBySlug(docSlug)
   const device = getDeviceBySlug(deviceSlug)
   if (!doc || !device) return {}
@@ -57,18 +60,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       type: "article",
-      url: `${BASE_URL}/guides/${docParam}/${deviceParam}`,
+      url: `${BASE_URL}/guides/${docParam}/from-${deviceSlug}`,
     },
     twitter: { card: "summary_large_image", title, description },
-    alternates: { canonical: `${BASE_URL}/guides/${docParam}/${deviceParam}` },
+    alternates: { canonical: `${BASE_URL}/guides/${docParam}/from-${deviceSlug}` },
   }
 }
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default async function DocDevicePage({ params }: Props) {
-  const { document: docParam, device: deviceParam } = await params
+  const { document: docParam, device: deviceSlug } = await params
   const docSlug = docParam.replace("fax-", "")
-  const deviceSlug = deviceParam.replace("from-", "")
+  // deviceSlug is the raw slug — Next.js strips the "from-" literal prefix from the folder name
   const doc = getDocumentBySlug(docSlug)
   const device = getDeviceBySlug(deviceSlug)
   if (!doc || !device) notFound()
@@ -168,7 +171,7 @@ export default async function DocDevicePage({ params }: Props) {
     },
     // Sibling doc pages (same device)
     ...siblingDocs.map((d) => ({
-      href: `/guides/fax-${d.slug}/${deviceParam}`,
+      href: `/guides/fax-${d.slug}/from-${deviceSlug}`,
       title: `Fax a ${d.name} from ${device.name}`,
       description: `How to fax ${d.name}s from your ${device.name}`,
     })),
@@ -194,7 +197,7 @@ export default async function DocDevicePage({ params }: Props) {
             { name: "Home", href: "/" },
             { name: "Fax Guides", href: "/guides" },
             { name: `Fax a ${doc.name}`, href: `/guides/${docParam}` },
-            { name: device.name, href: `/guides/${docParam}/${deviceParam}` },
+            { name: device.name, href: `/guides/${docParam}/from-${deviceSlug}` },
           ]}
         />
 
@@ -355,6 +358,8 @@ export default async function DocDevicePage({ params }: Props) {
 
         {/* CTA */}
         <CTABanner variant={ctaVariant} subtext={`Works on ${device.name} · Free to start · No fax machine needed`} />
+        {/* Canonical self-reference for clarity */}
+        {/* URL: /guides/{docParam}/from-{deviceSlug} */}
       </div>
     </div>
   )
