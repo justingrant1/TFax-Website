@@ -5,8 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-
-const APP_STORE_LINK = "https://apps.apple.com/us/app/tigerfax/id6758597882"
+import { SmartAppLink } from "@/components/smart-app-link"
 
 const navLinks = [
   { href: "#features", label: "Features" },
@@ -51,9 +50,9 @@ export function Header() {
             asChild
             className="hidden bg-primary text-primary-foreground hover:bg-primary/90 md:flex"
           >
-            <Link href={APP_STORE_LINK} target="_blank" rel="noopener noreferrer">
+            <SmartAppLink>
               Download App
-            </Link>
+            </SmartAppLink>
           </Button>
 
           <button
@@ -85,14 +84,9 @@ export function Header() {
                 asChild
                 className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
               >
-                <Link
-                  href={APP_STORE_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setOpen(false)}
-                >
+                <SmartAppLink onClick={() => setOpen(false)}>
                   Download App
-                </Link>
+                </SmartAppLink>
               </Button>
             </div>
           </nav>

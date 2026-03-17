@@ -1,8 +1,6 @@
-import Link from "next/link"
 import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
-
-const APP_STORE_LINK = "https://apps.apple.com/us/app/tigerfax/id6758597882"
+import { SmartAppLink } from "@/components/smart-app-link"
 
 const plans = [
   {
@@ -41,8 +39,8 @@ const plans = [
   },
   {
     name: "Pro",
-    price: "Monthly",
-    period: "or annual",
+    price: "$14.99",
+    period: "per month",
     description: "For power users who fax regularly.",
     features: [
       "Everything in Pay Per Page",
@@ -161,13 +159,9 @@ export function PricingSection() {
                     : "bg-primary text-primary-foreground hover:bg-primary/90"
                 }`}
               >
-                <Link
-                  href={APP_STORE_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <SmartAppLink>
                   {plan.cta}
-                </Link>
+                </SmartAppLink>
               </Button>
             </div>
           ))}
