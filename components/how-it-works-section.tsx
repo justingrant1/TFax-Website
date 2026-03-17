@@ -1,25 +1,29 @@
-import Image from "next/image"
+import { PhoneMockup } from "@/components/phone-mockup"
 
 const steps = [
   {
     number: "01",
     title: "Scan or Import",
-    description: "Use your camera to scan documents or import PDFs and images from your photo library.",
+    description:
+      "Use your camera to scan documents with real-time edge detection, or import PDFs and images from Files, Photos, or iCloud.",
   },
   {
     number: "02",
-    title: "Enhance & Edit",
-    description: "Apply filters to make your documents clearer. Add a professional cover page with your message.",
+    title: "Add a Cover Page",
+    description:
+      "Optionally add a professional cover page with To, From, Subject, and a custom message — all in seconds.",
   },
   {
     number: "03",
     title: "Enter Recipient",
-    description: "Type the fax number or select from your contacts. We handle international formatting for you.",
+    description:
+      "Type the fax number or pick from your contacts. International formatting is handled automatically.",
   },
   {
     number: "04",
-    title: "Send & Track",
-    description: "Hit send and track your fax in real-time. Get notified when it's successfully delivered.",
+    title: "Review, Pay & Send",
+    description:
+      "See the cost upfront, tap send, and track delivery in real-time. Get notified the moment it's received.",
   },
 ]
 
@@ -28,12 +32,14 @@ export function HowItWorksSection() {
     <section id="how-it-works" className="py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="grid items-center gap-12 lg:grid-cols-2">
+          {/* Steps */}
           <div>
             <h2 className="mb-4 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
               Sending a fax has never been easier
             </h2>
             <p className="mb-10 text-pretty text-muted-foreground md:text-lg">
-              Four simple steps to send professional faxes from anywhere.
+              Four simple steps to send professional faxes from anywhere in the
+              world.
             </p>
 
             <div className="space-y-8">
@@ -43,21 +49,29 @@ export function HowItWorksSection() {
                     {step.number}
                   </div>
                   <div>
-                    <h3 className="mb-1 font-semibold text-foreground">{step.title}</h3>
-                    <p className="text-sm text-muted-foreground">{step.description}</p>
+                    <h3 className="mb-1 font-semibold text-foreground">
+                      {step.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-muted-foreground">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
+          {/* Phone mockup */}
           <div className="flex items-center justify-center">
-            <Image
-              src="/images/gemini-generated-image-67ssa767ssa767ss.png"
-              alt="TigerFax mascot sending a fax"
-              width={400}
-              height={400}
-            />
+            <div className="relative">
+              <div className="pointer-events-none absolute inset-0 scale-90 rounded-full bg-primary/15 blur-3xl" />
+              <PhoneMockup
+                src="/images/main_screen.PNG"
+                alt="TigerFax send fax screen"
+                width={260}
+                height={520}
+              />
+            </div>
           </div>
         </div>
       </div>
