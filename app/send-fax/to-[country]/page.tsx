@@ -13,7 +13,7 @@ import { CheckCircle } from "lucide-react"
 const BASE_URL = "https://www.tigerfax.com"
 
 interface Props {
-  params: { country: string }
+  params: Promise<{ country: string }>
 }
 
 export async function generateStaticParams() {
@@ -21,7 +21,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const country = getCountryBySlug(params.country)
+  const { country: countrySlug } = await params
+  const country = getCountryBySlug(countrySlug)
   if (!country) return {}
   const title = `Send a Fax to ${country.name} from iPhone — TigerFax`
   const description = `How to send a fax to ${country.name} from your iPhone. Dial ${country.dialPrefix}, format: ${country.faxFormat}. Free to start — no fax machine needed.`
@@ -33,8 +34,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function SendFaxToCountryPage({ params }: Props) {
-  const country = getCountryBySlug(params.country)
+export default async function SendFaxToCountryPage({ params }: Props) {
+  const { country: countrySlug } = await params
+  const country = getCountryBySlug(countrySlug)
   if (!country) notFound()
 
   const intro = pickVariant(country.intro_variants, country.slug)

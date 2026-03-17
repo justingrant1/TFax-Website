@@ -12,7 +12,7 @@ import { CheckCircle, Hash } from "lucide-react"
 const BASE_URL = "https://www.tigerfax.com"
 
 interface Props {
-  params: { country: string }
+  params: Promise<{ country: string }>
 }
 
 export async function generateStaticParams() {
@@ -20,7 +20,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const country = getCountryBySlug(params.country)
+  const { country: countrySlug } = await params
+  const country = getCountryBySlug(countrySlug)
   if (!country) return {}
   const title = `Get a Fax Number for ${country.name} — TigerFax Pro`
   const description = `Get a dedicated US fax number to send and receive faxes with ${country.name} contacts. TigerFax Pro — $4.99/month. No fax machine, no hardware.`
@@ -32,8 +33,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function FaxNumberCountryPage({ params }: Props) {
-  const country = getCountryBySlug(params.country)
+export default async function FaxNumberCountryPage({ params }: Props) {
+  const { country: countrySlug } = await params
+  const country = getCountryBySlug(countrySlug)
   if (!country) notFound()
 
   const intro = pickVariant(country.number_intro_variants, country.slug + "-number")
