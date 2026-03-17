@@ -88,10 +88,17 @@ const featureCategories = [
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="bg-secondary/50 py-20 md:py-28">
+    <section
+      id="features"
+      className="bg-secondary/50 py-20 md:py-28"
+      aria-labelledby="features-heading"
+    >
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="mb-12 text-center md:mb-16">
-          <h2 className="mb-4 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          <h2
+            id="features-heading"
+            className="mb-4 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl"
+          >
             Everything you need to fax smarter
           </h2>
           <p className="mx-auto max-w-2xl text-pretty text-muted-foreground md:text-lg">
@@ -105,7 +112,7 @@ export function FeaturesSection() {
             <div key={cat.category}>
               {/* Category header */}
               <div className="mb-5 flex items-center gap-3">
-                <span className="text-2xl">{cat.emoji}</span>
+                <span className="text-2xl" aria-hidden="true">{cat.emoji}</span>
                 <h3 className="text-xl font-bold text-foreground">{cat.category}</h3>
                 {cat.badge && (
                   <span className="rounded-full border border-primary/20 bg-primary/10 px-2.5 py-0.5 text-xs font-semibold text-primary">
@@ -122,7 +129,7 @@ export function FeaturesSection() {
                     className="rounded-xl bg-card p-6 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
                   >
                     <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10">
-                      <feature.icon className="h-5 w-5 text-primary" />
+                      <feature.icon className="h-5 w-5 text-primary" aria-hidden="true" />
                     </div>
                     <h4 className="mb-2 font-semibold text-card-foreground">
                       {feature.title}

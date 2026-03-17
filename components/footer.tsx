@@ -34,7 +34,7 @@ export function Footer() {
           {/* Product */}
           <div>
             <h3 className="mb-4 text-sm font-semibold text-foreground">Product</h3>
-            <nav className="flex flex-col gap-3 text-sm">
+            <nav className="flex flex-col gap-3 text-sm" aria-label="Product navigation">
               <Link
                 href="#features"
                 className="text-muted-foreground transition-colors hover:text-foreground"
@@ -64,7 +64,7 @@ export function Footer() {
             <h3 className="mb-4 text-sm font-semibold text-foreground">
               Legal &amp; Support
             </h3>
-            <nav className="flex flex-col gap-3 text-sm">
+            <nav className="flex flex-col gap-3 text-sm" aria-label="Legal and support navigation">
               <Link
                 href="/privacy"
                 className="text-muted-foreground transition-colors hover:text-foreground"
@@ -94,7 +94,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} TigerFax. All rights reserved.
+          &copy; 2026 TigerFax. All rights reserved.
         </div>
       </div>
     </footer>

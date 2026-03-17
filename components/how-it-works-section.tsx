@@ -29,12 +29,12 @@ const steps = [
 
 export function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="py-20 md:py-28">
+    <section id="how-it-works" className="py-20 md:py-28" aria-labelledby="how-it-works-heading">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           {/* Steps */}
           <div>
-            <h2 className="mb-4 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            <h2 id="how-it-works-heading" className="mb-4 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
               Sending a fax has never been easier
             </h2>
             <p className="mb-10 text-pretty text-muted-foreground md:text-lg">

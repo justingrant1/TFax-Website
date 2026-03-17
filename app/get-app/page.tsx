@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Scan the QR code with your iPhone camera, or send yourself a link — you'll be in the App Store in seconds.",
   robots: { index: false, follow: false },
+  alternates: {
+    canonical: "https://www.tigerfax.app/get-app",
+  },
 }
 
 export default function GetAppPage() {

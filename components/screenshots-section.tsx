@@ -26,10 +26,10 @@ const screenshots = [
 
 export function ScreenshotsSection() {
   return (
-    <section className="bg-secondary/30 py-20 md:py-28">
+    <section id="screenshots" className="bg-secondary/30 py-20 md:py-28" aria-labelledby="screenshots-heading">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="mb-12 text-center md:mb-16">
-          <h2 className="mb-4 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          <h2 id="screenshots-heading" className="mb-4 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             See TigerFax in action
           </h2>
           <p className="mx-auto max-w-2xl text-pretty text-muted-foreground md:text-lg">

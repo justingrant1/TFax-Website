@@ -163,17 +163,17 @@ export function GetAppClient() {
         {/* ── Header ──────────────────────────────────────────────────────── */}
         <header className="sticky top-0 z-50 border-b border-white/[0.08] bg-gray-950/90 backdrop-blur">
           <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 md:px-6">
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2" aria-label="TigerFax home">
               <Image
                 src="/images/gemini-generated-image-ieqesaieqesaieqe.png"
-                alt="TigerFax"
+                alt="TigerFax logo"
                 width={32}
                 height={32}
                 className="rounded-lg"
               />
               <span className="font-bold text-white">TigerFax</span>
             </Link>
-            <nav className="hidden items-center gap-6 md:flex">
+            <nav className="hidden items-center gap-6 md:flex" aria-label="Main navigation">
               <Link
                 href="/#features"
                 className="text-sm text-white/60 transition-colors hover:text-white"
@@ -209,7 +209,7 @@ export function GetAppClient() {
               href="/"
               className="mb-4 inline-flex items-center gap-1.5 text-sm text-white/50 transition-colors hover:text-white/80"
             >
-              <ChevronLeft className="h-4 w-4" />
+            <ChevronLeft className="h-4 w-4" aria-hidden="true" />
               Back to TigerFax
             </Link>
             <div className="flex items-center gap-4">
@@ -333,6 +333,7 @@ export function GetAppClient() {
                       onKeyDown={(e) => e.key === "Enter" && handleSendEmail()}
                       placeholder="your@email.com"
                       autoComplete="email"
+                      aria-label="Email address"
                       className="w-full rounded-xl border border-white/10 bg-white/[0.04] py-3.5 pl-11 pr-4 text-sm text-white placeholder-white/30 outline-none transition focus:border-orange-500/60 focus:bg-orange-500/[0.05] focus:ring-2 focus:ring-orange-500/20"
                     />
                   </div>
@@ -382,6 +383,7 @@ export function GetAppClient() {
                       onKeyDown={(e) => e.key === "Enter" && handleSendSMS()}
                       placeholder="+1 (555) 000-0000"
                       autoComplete="tel"
+                      aria-label="Phone number"
                       className="w-full rounded-xl border border-white/10 bg-white/[0.04] py-3.5 pl-11 pr-4 text-sm text-white placeholder-white/30 outline-none transition focus:border-orange-500/60 focus:bg-orange-500/[0.05] focus:ring-2 focus:ring-orange-500/20"
                     />
                   </div>
@@ -472,7 +474,7 @@ export function GetAppClient() {
               </Link>
             </div>
             <p className="text-xs text-white/30">
-              © {new Date().getFullYear()} TigerFax. All rights reserved.
+              &copy; 2026 TigerFax. All rights reserved.
             </p>
           </div>
         </footer>

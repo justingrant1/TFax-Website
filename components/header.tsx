@@ -20,7 +20,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2" aria-label="TigerFax home">
           <Image
             src="/images/gemini-generated-image-ieqesaieqesaieqe.png"
             alt="TigerFax logo"
@@ -32,7 +32,7 @@ export function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-6 md:flex" aria-label="Main navigation">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -59,16 +59,18 @@ export function Header() {
             className="flex items-center justify-center rounded-md p-2 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground md:hidden"
             onClick={() => setOpen(!open)}
             aria-label="Toggle navigation menu"
+            aria-expanded={open}
+            aria-controls="mobile-menu"
           >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {open ? <X className="h-5 w-5" aria-hidden="true" /> : <Menu className="h-5 w-5" aria-hidden="true" />}
           </button>
         </div>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-border bg-background md:hidden">
-          <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4">
+        <div id="mobile-menu" className="border-t border-border bg-background md:hidden">
+          <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4" aria-label="Mobile navigation">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

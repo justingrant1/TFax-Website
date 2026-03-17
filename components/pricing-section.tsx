@@ -59,10 +59,17 @@ const plans = [
 
 export function PricingSection() {
   return (
-    <section id="pricing" className="bg-secondary/50 py-20 md:py-28">
+    <section
+      id="pricing"
+      className="bg-secondary/50 py-20 md:py-28"
+      aria-labelledby="pricing-heading"
+    >
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="mb-12 text-center md:mb-16">
-          <h2 className="mb-4 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          <h2
+            id="pricing-heading"
+            className="mb-4 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl"
+          >
             Simple, transparent pricing
           </h2>
           <p className="mx-auto max-w-2xl text-pretty text-muted-foreground md:text-lg">
@@ -129,13 +136,14 @@ export function PricingSection() {
               </div>
 
               {/* Features */}
-              <ul className="mb-7 space-y-3">
+              <ul className="mb-7 space-y-3" aria-label={`${plan.name} plan features`}>
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-2.5 text-sm">
                     <Check
                       className={`mt-0.5 h-4 w-4 shrink-0 ${
                         plan.highlighted ? "text-primary-foreground" : "text-primary"
                       }`}
+                      aria-hidden="true"
                     />
                     <span
                       className={
