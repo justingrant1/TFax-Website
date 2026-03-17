@@ -39,9 +39,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const descriptions: Record<ComparePageType, string> = {
     vs: `TigerFax vs ${competitor.name}: side-by-side feature comparison, pricing, and verdict. See why TigerFax is the better choice for iPhone users in 2026.`,
-    alternative: `Looking for a ${competitor.name} alternative? TigerFax is free to start, built for iPhone, and costs $4.99/month for Pro. Full comparison inside.`,
+    alternative: `Looking for a ${competitor.name} alternative? TigerFax is free to start, built for iPhone, and costs $14.99/month for Pro. Full comparison inside.`,
     review: `${competitor.name} review 2026: features, pricing, pros and cons. Is it worth it? We compare it to TigerFax so you can decide.`,
-    pricing: `${competitor.name} pricing breakdown 2026: every plan, hidden fees, and how it compares to TigerFax's $4.99/month Pro plan.`,
+    pricing: `${competitor.name} pricing breakdown 2026: every plan, hidden fees, and how it compares to TigerFax's $14.99/month Pro plan.`,
   }
 
   const title = titles[type]
@@ -190,10 +190,10 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
               <div className="rounded-lg border border-orange-300 bg-orange-50 dark:bg-orange-950/20 p-5">
                 <p className="text-xs font-semibold text-orange-600 uppercase tracking-wide mb-2">TigerFax</p>
                 <p className="text-3xl font-bold text-orange-600">Free</p>
-                <p className="text-sm text-muted-foreground mt-1">then $4.99/mo Pro</p>
+                <p className="text-sm text-muted-foreground mt-1">then $14.99/mo Pro</p>
                 <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-green-500 shrink-0 mt-0.5" />Free to start — no credit card</li>
-                  <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-green-500 shrink-0 mt-0.5" />$4.99/mo for unlimited sending</li>
+                  <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-green-500 shrink-0 mt-0.5" />$14.99/mo for unlimited sending</li>
                   <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-green-500 shrink-0 mt-0.5" />Dedicated US fax number included</li>
                   <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-green-500 shrink-0 mt-0.5" />HIPAA-compliant faxing</li>
                   <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-green-500 shrink-0 mt-0.5" />Built for iPhone — camera scanning</li>

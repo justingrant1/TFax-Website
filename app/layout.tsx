@@ -123,7 +123,7 @@ const softwareAppSchema = {
     },
     {
       "@type": "Offer",
-      price: "4.99",
+      price: "14.99",
       priceCurrency: "USD",
       description: "Pro plan — dedicated fax number, unlimited inbox",
     },

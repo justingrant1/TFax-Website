@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const country = getCountryBySlug(countrySlug)
   if (!country) return {}
   const title = `Receive Faxes from ${country.name} on iPhone — TigerFax`
-  const description = `Get a dedicated fax number to receive faxes from ${country.name} directly on your iPhone. No fax machine needed. TigerFax Pro — $4.99/month.`
+  const description = `Get a dedicated fax number to receive faxes from ${country.name} directly on your iPhone. No fax machine needed. TigerFax Pro — $14.99/month.`
   return {
     title,
     description,
@@ -44,7 +44,7 @@ export default async function ReceiveFaxFromCountryPage({ params }: Props) {
   const steps = [
     {
       name: "Upgrade to TigerFax Pro",
-      text: "Subscribe to TigerFax Pro ($4.99/month) to get a dedicated US fax number that accepts incoming faxes from anywhere in the world, including " + country.name + ".",
+      text: "Subscribe to TigerFax Pro ($14.99/month) to get a dedicated US fax number that accepts incoming faxes from anywhere in the world, including " + country.name + ".",
     },
     {
       name: "Share your fax number",
@@ -135,7 +135,7 @@ export default async function ReceiveFaxFromCountryPage({ params }: Props) {
               "Instant push notifications",
               "PDFs stored in your inbox",
               "HIPAA-compliant",
-              "$4.99/month — cancel anytime",
+              "$14.99/month — cancel anytime",
             ].map((item) => (
               <div key={item} className="flex items-center gap-2 text-sm text-orange-700 dark:text-orange-300">
                 <CheckCircle className="h-4 w-4 shrink-0" />
@@ -176,7 +176,7 @@ export default async function ReceiveFaxFromCountryPage({ params }: Props) {
           />
         </section>
 
-        <CTABanner variant="Get Your Dedicated Fax Number" subtext="TigerFax Pro · $4.99/month · Cancel anytime" />
+        <CTABanner variant="Get Your Dedicated Fax Number" subtext="TigerFax Pro · $14.99/month · Cancel anytime" />
 
         <section className="mt-8 mb-8">
           <FAQSection faqs={faqs} />

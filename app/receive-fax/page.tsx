@@ -7,7 +7,7 @@ import { CTABanner } from "@/components/pseo/CTABanner"
 export const metadata: Metadata = {
   title: "Receive Faxes from Any Country on iPhone — TigerFax Pro",
   description:
-    "Get a dedicated fax number to receive faxes from any country directly on your iPhone. No fax machine needed. TigerFax Pro — $4.99/month.",
+    "Get a dedicated fax number to receive faxes from any country directly on your iPhone. No fax machine needed. TigerFax Pro — $14.99/month.",
   alternates: { canonical: "https://www.tigerfax.com/receive-fax" },
   openGraph: {
     title: "Receive International Faxes on iPhone | TigerFax",
@@ -43,7 +43,7 @@ export default function ReceiveFaxHubPage() {
 
         {/* Pro callout */}
         <div className="mb-10 rounded-lg border border-orange-200 bg-orange-50 dark:border-orange-800 dark:bg-orange-950/30 p-5">
-          <p className="font-bold text-orange-700 dark:text-orange-300 mb-1">TigerFax Pro — $4.99/month</p>
+          <p className="font-bold text-orange-700 dark:text-orange-300 mb-1">TigerFax Pro — $14.99/month</p>
           <p className="text-sm text-orange-700 dark:text-orange-300">
             Includes a dedicated US fax number, unlimited incoming faxes (within monthly page limits), instant push
             notifications, and HIPAA-compliant storage. Cancel anytime.
@@ -75,7 +75,7 @@ export default function ReceiveFaxHubPage() {
           )
         })}
 
-        <CTABanner variant="Get Your Dedicated Fax Number" subtext="TigerFax Pro · $4.99/month · Cancel anytime" />
+        <CTABanner variant="Get Your Dedicated Fax Number" subtext="TigerFax Pro · $14.99/month · Cancel anytime" />
       </div>
     </div>
   )

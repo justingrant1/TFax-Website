@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const country = getCountryBySlug(countrySlug)
   if (!country) return {}
   const title = `Get a Fax Number for ${country.name} — TigerFax Pro`
-  const description = `Get a dedicated US fax number to send and receive faxes with ${country.name} contacts. TigerFax Pro — $4.99/month. No fax machine, no hardware.`
+  const description = `Get a dedicated US fax number to send and receive faxes with ${country.name} contacts. TigerFax Pro — $14.99/month. No fax machine, no hardware.`
   return {
     title,
     description,
@@ -48,7 +48,7 @@ export default async function FaxNumberCountryPage({ params }: Props) {
     },
     {
       name: "Upgrade to TigerFax Pro",
-      text: "Subscribe to TigerFax Pro ($4.99/month) to unlock your dedicated US fax number. Cancel anytime.",
+      text: "Subscribe to TigerFax Pro ($14.99/month) to unlock your dedicated US fax number. Cancel anytime.",
       tip: "Your dedicated number is assigned instantly — no waiting, no paperwork.",
     },
     {
@@ -72,7 +72,7 @@ export default async function FaxNumberCountryPage({ params }: Props) {
     },
     {
       question: `How much does a fax number for ${country.name} cost?`,
-      answer: `TigerFax Pro is $4.99/month and includes a dedicated US fax number, unlimited incoming faxes (within monthly page limits), and a credit allowance for outgoing faxes to ${country.name}. Cancel anytime.`,
+      answer: `TigerFax Pro is $14.99/month and includes a dedicated US fax number, unlimited incoming faxes (within monthly page limits), and a credit allowance for outgoing faxes to ${country.name}. Cancel anytime.`,
     },
     {
       question: `Do I need a ${country.name} fax number specifically?`,
@@ -160,7 +160,7 @@ export default async function FaxNumberCountryPage({ params }: Props) {
               `Receive faxes from ${country.name}`,
               "Instant push notifications",
               "HIPAA-compliant",
-              "$4.99/month — cancel anytime",
+              "$14.99/month — cancel anytime",
             ].map((item) => (
               <div key={item} className="flex items-center gap-2 text-sm text-orange-700 dark:text-orange-300">
                 <CheckCircle className="h-4 w-4 shrink-0" />
@@ -201,7 +201,7 @@ export default async function FaxNumberCountryPage({ params }: Props) {
           />
         </section>
 
-        <CTABanner variant="Get Your Dedicated Fax Number" subtext="TigerFax Pro · $4.99/month · Cancel anytime" />
+        <CTABanner variant="Get Your Dedicated Fax Number" subtext="TigerFax Pro · $14.99/month · Cancel anytime" />
 
         <section className="mt-8 mb-8">
           <FAQSection faqs={faqs} />

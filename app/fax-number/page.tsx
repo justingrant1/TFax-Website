@@ -7,7 +7,7 @@ import { CTABanner } from "@/components/pseo/CTABanner"
 export const metadata: Metadata = {
   title: "Get a Fax Number for Any Country — TigerFax Pro",
   description:
-    "Get a dedicated US fax number to send and receive faxes with contacts in any country. TigerFax Pro — $4.99/month. No hardware, no fax machine.",
+    "Get a dedicated US fax number to send and receive faxes with contacts in any country. TigerFax Pro — $14.99/month. No hardware, no fax machine.",
   alternates: { canonical: "https://www.tigerfax.com/fax-number" },
   openGraph: {
     title: "Get a Fax Number for Any Country | TigerFax",
@@ -44,7 +44,7 @@ export default function FaxNumberHubPage() {
         {/* Pro pricing callout */}
         <div className="mb-10 grid gap-4 sm:grid-cols-3">
           {[
-            { label: "Monthly price", value: "$4.99" },
+            { label: "Monthly price", value: "$14.99" },
             { label: "Setup fee", value: "$0" },
             { label: "Countries supported", value: "32+" },
           ].map((stat) => (
@@ -80,7 +80,7 @@ export default function FaxNumberHubPage() {
           )
         })}
 
-        <CTABanner variant="Get Your Dedicated Fax Number" subtext="TigerFax Pro · $4.99/month · Cancel anytime" />
+        <CTABanner variant="Get Your Dedicated Fax Number" subtext="TigerFax Pro · $14.99/month · Cancel anytime" />
       </div>
     </div>
   )

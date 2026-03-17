@@ -58,7 +58,7 @@ export function ComparisonTable({ competitor }: ComparisonTableProps) {
             <th className="px-4 py-3 text-left font-semibold text-muted-foreground w-1/2">Feature</th>
             <th className="px-4 py-3 text-center font-semibold text-orange-600 w-1/4">
               TigerFax
-              <div className="text-xs font-normal text-muted-foreground mt-0.5">Free · $4.99/mo Pro</div>
+              <div className="text-xs font-normal text-muted-foreground mt-0.5">Free · $14.99/mo Pro</div>
             </th>
             <th className="px-4 py-3 text-center font-semibold w-1/4">
               {competitor.name}
@@ -84,7 +84,7 @@ export function ComparisonTable({ competitor }: ComparisonTableProps) {
           <tr className="border-t bg-orange-50/50 dark:bg-orange-950/20">
             <td className="px-4 py-3 font-semibold">Starting Price</td>
             <td className="px-4 py-3 text-center font-bold text-orange-600">
-              Free<br /><span className="text-xs font-normal">$4.99/mo Pro</span>
+              Free<br /><span className="text-xs font-normal">$14.99/mo Pro</span>
             </td>
             <td className="px-4 py-3 text-center font-bold">
               {competitor.pricing.free ? "Free tier" : `$${competitor.pricing.startingPrice}/mo`}

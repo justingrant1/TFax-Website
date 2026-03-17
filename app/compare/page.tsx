@@ -54,7 +54,7 @@ export default function CompareHubPage() {
           <div className="grid gap-2 sm:grid-cols-2">
             {[
               "Free to start — no credit card required",
-              "$4.99/month Pro (vs $10–$30/month competitors)",
+              "$14.99/month Pro (vs $10–$30/month competitors)",
               "Built exclusively for iPhone & iPad",
               "HIPAA-compliant faxing",
               "Camera scanning with LiDAR support",

@@ -240,7 +240,7 @@ export default async function DeviceHowToPage({ params }: { params: Promise<{ sl
             </div>
             <div className="rounded-lg border border-orange-300 bg-orange-50 dark:bg-orange-950/20 p-5">
               <p className="font-bold text-lg">Pro</p>
-              <p className="text-3xl font-bold mt-1">$4.99<span className="text-base font-normal text-muted-foreground">/mo</span></p>
+              <p className="text-3xl font-bold mt-1">$14.99<span className="text-base font-normal text-muted-foreground">/mo</span></p>
               <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
                 <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /> Unlimited fax pages</li>
                 <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /> Dedicated US fax number</li>
